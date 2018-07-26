@@ -101,6 +101,10 @@ public class MimeTypeUtil {
                 return "odt";
             case MimeType.OFFICE_DOCUMENT:
                 return "docx";
+            case MimeType.OFFICE_PRESENTATION:
+                return "pptx";
+            case MimeType.OFFICE_SHEET:
+                return "xlsx";
             case MimeType.TEXT_PLAIN:
                 return "txt";
             case MimeType.TEXT_CSV:
@@ -148,6 +152,9 @@ public class MimeTypeUtil {
                         break;
                     } else if (content.contains(MimeType.OFFICE_PRESENTATION)) {
                         mimeType = MimeType.OFFICE_PRESENTATION;
+                        break;
+                    } else if (content.contains(MimeType.OFFICE_SHEET)) {
+                        mimeType = MimeType.OFFICE_SHEET;
                         break;
                     }
                 }
